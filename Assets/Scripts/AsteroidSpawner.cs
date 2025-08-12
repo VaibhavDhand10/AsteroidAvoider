@@ -68,7 +68,7 @@ public class AsteroidSpawner : MonoBehaviour
         GameObject asteroidInstance = Instantiate(selectedAsteroid, worldSpawnPoint, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
 
         Rigidbody rb = asteroidInstance.GetComponent<Rigidbody>();
-        rb.velocity = direction.normalized * Random.Range(forceRange.x, forceRange.y);
+        rb.linearVelocity = direction.normalized * Random.Range(forceRange.x, forceRange.y);
     }
 
     private void OnBecameInvisible()

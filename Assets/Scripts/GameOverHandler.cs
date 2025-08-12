@@ -43,7 +43,7 @@ public class GameOverHandler : MonoBehaviour
         scoreSystem.StartTimer();
         player.transform.position = Vector3.zero;
         player.SetActive(true);
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         asteroidSpawner.enabled = true;
         gameOverDisplay.gameObject.SetActive(false);
     }
